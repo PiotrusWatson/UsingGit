@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
+  jumpStrength: 1000
   sprintSpeed: 2000
 --- !u!1 &832575517
 GameObject:
