@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
+    public float jumpStrength;
     Rigidbody rigidbody;
     float horizontal, vertical;
     // Start is called before the first frame update
@@ -16,6 +17,9 @@ public class PlayerMove : MonoBehaviour
     void Update(){
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+        if (Input.GetButtonDown("Jump")){
+            rigidbody.AddForce(transform.up * jumpStrength);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
